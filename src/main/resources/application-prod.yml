@@ -1,10 +1,10 @@
 spring:
   profiles: prod
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_mobile
+    url: jdbc:mysql://${PROD_MYSQLHOST}:${PROD_MYSQLPORT}/${PROD_MYSQLDATABASE}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: secret_user
-    password: secret_pass
+    username: ${PROD_MYSQLUSER}
+    password: ${PROD_MYSQLPASSWORD}
   jpa:
     hibernate:
       ddl-auto: none
