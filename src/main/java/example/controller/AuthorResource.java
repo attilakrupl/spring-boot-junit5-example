@@ -27,6 +27,11 @@ public class AuthorResource {
         this.authorService = authorService;
     }
 
+    @GetMapping
+    public String isAvailable() {
+        return "it is available";
+    }
+
     @Operation(summary = "Creates a new author")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Created the author"),
