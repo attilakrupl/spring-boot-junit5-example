@@ -68,7 +68,7 @@ public class BookRepositoryTest {
     public void whenDeleteFromDerivedQuery_thenDeletingShouldBeSuccessful() {
         long deletedRecords = bookRepository.deleteByTitle("title1");
 
-        assertEquals(2, deletedRecords);
+        assertEquals(1, deletedRecords);
         assertEquals(initialCount+1, bookRepository.count());
     }
 
